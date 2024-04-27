@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Obsidian Simple Read Later",
+  "description": "Saves a URL to Obsidian to act on it later",
+  "version": "1.0",
+  "action": {
+    "default_title": "Save URL to Obsidian"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["http://127.0.0.1:27123/vault/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
