@@ -14,3 +14,16 @@ Save URLs to your Obsidian vault to read them later with a click of a button!
 3. Copy the API key
 4. When you first try to save any link, the extension is going to open its settings. Insert the API key there and click "Save".
 5. Enjoy!
+
+## Config
+
+### Path in Obsidian
+
+By default the extension saves your URLs to "Read Later" note at the root of your vault. 
+
+You can set it to any note you want:
+1. Copy the Obsidian URL of the note
+    ![](./pics/ext_note_path_1.png)
+2. Extract the note path from the URL
+    ![](./pics/ext_note_path_2.png)
+3. Set it in the extension's settings
