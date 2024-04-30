@@ -1,6 +1,6 @@
 # obsidian-simple-read-later
 
-Save URLs to your Obsidian vault to read them later with a click of a button!
+Save URLs to your Obsidian vault with a click of a button to read them later!
 
 ![](./pics/ext_res.png)
 
