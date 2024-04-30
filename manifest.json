@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Obsidian Simple Read Later",
-  "description": "Saves a URL to Obsidian to act on it later",
-  "version": "1.0",
+  "description": "Save URLs to your Obsidian vault to read them later with a click of a button!",
+  "version": "1.0.0",
   "action": {
     "default_title": "Save URL to Obsidian"
   },
