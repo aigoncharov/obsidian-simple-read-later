@@ -2,19 +2,35 @@ let timer = undefined;
 
 chrome.action.onClicked.addListener(async (tab) => {
   clearTimeout(timer);
-  chrome.action.setBadgeBackgroundColor({ color: 'white' });
+  chrome.action.setBadgeBackgroundColor({ color: "white" });
   chrome.action.setBadgeText({ text: "🔄" });
 
   try {
-    const res = await fetch("http://127.0.0.1:27123/vault/Read%20later.md", {
+    const { url, token, path, tags } = await chrome.storage.sync.get({
+      url: "http://127.0.0.1:27123",
+      token: "",
+      path: "Read%20later.md",
+      tags: "#todo #read_later",
+    });
+
+    if (!token) {
+      chrome.runtime.openOptionsPage();
+      throw new Error();
+    }
+
+    let tagsFormatted = tags.trim();
+    if (tagsFormatted.length !== 0) {
+      tagsFormatted = `${tagsFormatted} `;
+    }
+
+    const res = await fetch(`${url}/vault/${path}`, {
       method: "POST",
       headers: {
-        Authorization:
-          "Bearer d86762e884fb277819706033fadd41fef1b8353258f570210993c25103fdf56c",
+        Authorization: `Bearer ${token}`,
         Accept: "*/*",
         "Content-Type": "text/markdown",
       },
-      body: `- [ ] #todo #read_later ${tab.url}`,
+      body: `- [ ] ${tagsFormatted}${tab.url}`,
     });
 
     if (res.status !== 204) {
