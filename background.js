@@ -1,4 +1,5 @@
 let timer = undefined;
+const url = "http://127.0.0.1:27123";
 
 chrome.action.onClicked.addListener(async (tab) => {
   clearTimeout(timer);
@@ -6,8 +7,7 @@ chrome.action.onClicked.addListener(async (tab) => {
   chrome.action.setBadgeText({ text: "🔄" });
 
   try {
-    const { url, token, path, tags } = await chrome.storage.sync.get({
-      url: "http://127.0.0.1:27123",
+    const { token, path, tags } = await chrome.storage.sync.get({
       token: "",
       path: "Read%20later.md",
       tags: "#todo #read_later",

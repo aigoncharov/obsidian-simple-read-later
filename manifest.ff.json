@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Obsidian Simple Read Later",
+  "description": "Save URLs to your Obsidian vault with a click of a button to read them later!",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Save URL to Obsidian"
+  },
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["http://127.0.0.1:27123/vault/*"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "obsidian-simple-read-later@aigoncharov.github"
+    }
+  },
+  "homepage_url": "https://github.com/aigoncharov/obsidian-simple-read-later"
+}
