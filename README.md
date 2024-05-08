@@ -9,6 +9,8 @@ Save URLs to your Obsidian vault with a click of a button to read them later!
 [![](https://img.shields.io/chrome-web-store/v/fnahmopebdcdngkmejdodljgccofeigl
 )](https://chromewebstore.google.com/detail/obsidian-simple-read-late/fnahmopebdcdngkmejdodljgccofeigl)
 
+[![](https://img.shields.io/badge/firefox-1.0.0-blue)](https://addons.mozilla.org/en-US/firefox/addon/obsidian-simple-read-later/)
+
 ## Installation
 
 1. Install and enable [Obsidian Local REST API](https://github.com/coddingtonbear/obsidian-local-rest-api) extension.
