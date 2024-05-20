@@ -26,9 +26,6 @@ Save URLs to your Obsidian vault with a click of a button to read them later!
 
 By default the extension saves your URLs to "Read Later" note at the root of your vault. 
 
-You can set it to any note you want:
-1. Copy the Obsidian URL of the note
-    ![](./pics/ext_note_path_1.png)
-2. Extract the note path from the URL
-    ![](./pics/ext_note_path_2.png)
-3. Set it in the extension's settings
+You can set it to any note you want in a fomat: `DIRECTORY/FILE_NAME.md`
+
+Example: `TODO/Read later.md`
